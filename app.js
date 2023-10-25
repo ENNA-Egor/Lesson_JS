@@ -8,12 +8,14 @@ var riddle = {
         // TODO: написать логику проверки правильного ответа
         // alert для пользователя, console.log()
         if(this.tries===0){
-            alert('Вы не уложиились в отведённое количество попыток')    
+            alert('Вы не уложиились в отведённое количество попыток');
+            location.reload();    
             return
         }; 
         this.tries--;
         if (qest.toLowerCase()===this.correctAnswer){
             alert ('Вы отгадали. Игра окончена');
+            location.reload();
             return
         } else{
            

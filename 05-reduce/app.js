@@ -25,7 +25,7 @@ const order = [
    },
 ];
 
-// const totalPrice = order.reduce((sum, ord)=> {
+// const totalPrice = order.reduce((sum, ord)=> {   //Это аналог
 //    return sum + ord.price*ord.quantity;
 // },0);
 const totalPrice = order.reduce((sum, ord)=> sum + ord.price*ord.quantity,0);

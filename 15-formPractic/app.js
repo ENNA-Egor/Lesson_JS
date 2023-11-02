@@ -4,28 +4,46 @@ const registeredUsers = [
     ['editor', '12345'],
 ];
 
+
+// alert(registeredUsers[0][1]);
+
 const form = document.querySelector('form');
 const login = document.querySelector('input[name=login]');
 const password = document.querySelector('input[name=password]');
-
-console.log (login.name);
-console.log (password.name);
 
 form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event){
     event.preventDefault();
     validate();
-    console.log ('submit');
 };
 
 function validate (){
-    alert (login.value, password.value)
-    if((login.value === 'admin') && (password.value ==='KoI18')){
-        alert ('Ok');
-    } else{
-        alert ('No');
-    }
-};
+    //  registeredUsers.forEach(element => {            
+    //         if(
+    //             element[0].includes(login.value.trim())  //&&
+    //             // element[1].includes(password.value.trim())
+    //             ){
+    //                 alert ('Ok'); 
+    //                return
+    //             } else{
+    //                  alert ('No');                  
+    //                 }
+    // })
+    for(i=0; i< registeredUsers.length; i++){
+        alert(registeredUsers[i]);
+        if(
+            // registeredUsers[i][0].includes(login.value.trim())  &&
+
+            registeredUsers[i].includes(password.value.trim())
+            ){
+              alert ('Ok'); 
+            //   return
+             } else{
+                     alert ('No'); 
+                    //  return                 
+                }
+            }
+    };
 
 

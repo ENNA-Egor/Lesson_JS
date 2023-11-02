@@ -29,6 +29,7 @@ function validate() {
         console.log('Access granted');
         alert('Access granted');
         form.reset();
+        insertObj ()
     }
 
 };
@@ -44,4 +45,18 @@ function checkPass() {
     }
 };
 
+
+function insertObj(){
+    const btn = document.createElement('button');
+    btn.textContent= 'click Me';
+    btn.className = 'button_1';
+    btn.style.backgroundColor = 'orange';
+    btn.style.color = 'red';
+    btn.style.border = '2px solid green';
+    btn.style.borderRadius = '5px';
+    btn.style.margin = '5px';
+    btn.style.display = 'block';
+
+    form.before(btn);
+}
 

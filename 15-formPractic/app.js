@@ -18,7 +18,8 @@ function handleSubmit(event) {
 };
 
 function validate() {
-    if (!login.value && !password.value) {
+    let val= login.value;
+    if (!val && !password.value) {
         console.log('All fields are required');
         alert('All fields are required');
         return;
@@ -29,7 +30,7 @@ function validate() {
         console.log('Access granted');
         alert('Access granted');
         form.reset();
-        insertObj ()
+        insertObj (val)
     }
 
 };
@@ -46,9 +47,10 @@ function checkPass() {
 };
 
 
-function insertObj(){
+function insertObj(val){
+    alert(val);
     const btn = document.createElement('button');
-    btn.textContent= 'click Me';
+    btn.textContent= `${val}`;
     btn.className = 'button_1';
     btn.style.backgroundColor = 'orange';
     btn.style.color = 'red';
@@ -57,6 +59,6 @@ function insertObj(){
     btn.style.margin = '5px';
     btn.style.display = 'block';
 
-    form.before(btn);
+    form.append (btn);
 }
 

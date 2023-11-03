@@ -39,7 +39,7 @@ function createTodo(text) {
   list.appendChild(li);
 }
 
-function removeTodo() {
+function removeTodo() { // удаляем Todo
   this.removeEventListener('click', removeTodo);
   console.log (this.innerText);
   removeLocalStorageItem(this.innerText);

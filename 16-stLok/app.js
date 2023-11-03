@@ -46,7 +46,7 @@ function removeTodo() {
   this.remove();
 }
 
-function removeLocalStorageItem(item){
+function removeLocalStorageItem(item){ /// удаляем локалсторадж
     const todos = JSON.parse(localStorage.getItem('tasks'));
     localStorage.setItem('tasks', JSON.stringify([...todos.filter(x=> x!==item)]));
 }
